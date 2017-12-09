@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Principles of Information Visualization]]></title>
+    <url>%2F2017%2F12%2F09%2FPrinciples-of-Information-Visualization%2F</url>
+    <content type="text"><![CDATA[Inroduction本课程的主要内容是理解如何更清楚地向那些对数据感兴趣的利益相关者传达数据。有许多不同的利益相关者可能对使用视觉材料感兴趣。例如，你想和同行的数据科学家分享公正的数据表达，他们能够做出自己的推论和解释。但是，您也希望能够与可能熟悉域名但正在寻找具体可操作见解的经理和主管分享数据故事。在这个课程中将学会得到一个新的可视化技术，你将被要求扩展matplotlib代码库来增强其功能。这是您作为数据科学家的重要一步。要超越使用现成的工具，而是能够修改它们以支持理解数据和问题的新方法。]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Matplotlib</category>
+        <category>可视化</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Matplotlib</tag>
+        <tag>MachineLearning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hello wangjj]]></title>
+    <url>%2F2017%2F12%2F08%2Fhello-wangjj%2F</url>
+    <content type="text"><![CDATA[hello wanjj部署hexo]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F12%2F08%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
