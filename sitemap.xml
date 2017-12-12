@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
+    
+    <lastmod>2017-12-12T17:03:48.418Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.wang8008.cn/2017/12/10/markdown%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2017-12-12T11:15:49.739Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.wang8008.cn/2017/12/09/git%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2017-12-09T12:16:07.042Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
-    
-    <lastmod>2017-12-09T07:34:18.681Z</lastmod>
     
   </url>
   

@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
+    <lastmod>2017-12-12T17:03:48.418Z</lastmod>
+    <data>
+        <display>
+        <title>Principles of Information Visualization</title>
+        <pubTime>2017-12-09T02:51:13.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Matplotlib</tag>
+         
+        <tag>MachineLearning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="http://blog.wang8008.cn/categories/Python/"/>
+          
+             
+              <breadCrumb title="Matplotlib" url="http://blog.wang8008.cn/categories/Python/Matplotlib/"/>
+          
+             
+              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/Python/Matplotlib/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.wang8008.cn/2017/12/10/markdown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2017-12-12T11:15:49.739Z</lastmod>
     <data>
@@ -57,36 +87,6 @@
            
              
               <breadCrumb title="Linux" url="http://blog.wang8008.cn/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
-    <lastmod>2017-12-09T07:34:18.681Z</lastmod>
-    <data>
-        <display>
-        <title>Principles of Information Visualization</title>
-        <pubTime>2017-12-09T02:51:13.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Matplotlib</tag>
-         
-        <tag>MachineLearning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://blog.wang8008.cn/categories/Python/"/>
-          
-             
-              <breadCrumb title="Matplotlib" url="http://blog.wang8008.cn/categories/Python/Matplotlib/"/>
-          
-             
-              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/Python/Matplotlib/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
           
         </display>
     </data>
