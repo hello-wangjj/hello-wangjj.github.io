@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ten Simple Rules for Better Figures]]></title>
+    <url>%2F2017%2F12%2F14%2FTen-Simple-Rules-for-Better-Figures%2F</url>
+    <content type="text"><![CDATA[科学可视化经典定义为图形化显示科学数据的过程。 但是，这个过程远非直接的或自动的。 有很多不同的方法来表示相同的数据：散点图，线性图，条形图和饼图，等等。 此外，使用相同类型的情节的相同数据可能被视为非常不同，取决于谁在看数字。 科学可视化的更准确的定义将是人与数据之间的图形界面。 在这篇短文中，我们旨在提供一套基本的规则来改善图形设计，并解释一些常见的陷阱。 Rule 1: Know Your Audience Rule 2: Identify Your Message Rule 3: Adapt the Figure to the Support Medium Rule 4: Captions Are Not Optional Rule 5: Do Not Trust the Defaults Rule 6: Use Color Effectively Rule 7: Do Not Mislead the Reader Rule 8: Avoid “Chartjunk” Rule 9: Message Trumps Beauty Rule 10: Get the Right Tool]]></content>
+      <categories>
+        <category>可视化</category>
+      </categories>
+      <tags>
+        <tag>可视化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[markdown语法]]></title>
     <url>%2F2017%2F12%2F10%2Fmarkdown%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[概述 宗旨 兼容html 特殊字符自动转换 区块元素 段落和换行 标题 区块引用 列表 代码区块 分割线 区段元素 链接 强调 代码 图片 其它 自动链接 反斜杠 斜体和粗体 公式 $ 表示行内公式： $$ 表示整行公式： 表格 锚点 感谢 概述 宗旨 Markdown的目的是实现「易读易写」。 本文档参考Markdown: Basics （快速入门） 兼容html Markdown 语法的目标是：成为一种适用于网络的书写语言。 Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。 不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。不需要额外标注这是 HTML 或是 Markdown；只要直接加标签就可以了。 要制约的只有一些 HTML 区块元素――比如 &lt;div&gt;、&lt;table&gt;、&lt;pre&gt;、&lt;p&gt; 等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown 的生成器有足够智能，不会在 HTML 区块标签外加上不必要的&lt;p&gt;标签。 例子如下，在 Markdown 文件里加上一段 HTML 表格： 12345678910这是一个普通段落。&lt;table&gt; &lt;tr&gt; &lt;td&gt;Foo&lt;/td&gt; &lt;td&gt;*强调*&lt;/td&gt; &lt;/tr&gt;&lt;/table&gt;这是另一个普通段落。 请注意，在 HTML 区块标签间的 Markdown 格式语法将不会被处理。比如，你在 HTML 区块内使用 Markdown 样式的*强调*会没有效果。 HTML 的区段（行内）标签如 &lt;span&gt;、&lt;cite&gt;、&lt;del&gt; 可以在 Markdown 的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用 Markdown 格式，而直接采用 HTML 标签来格式化。举例说明：如果比较喜欢 HTML 的 &lt;a&gt; 或 &lt;img&gt; 标签，可以直接使用这些标签，而不用 Markdown 提供的链接或是图像标签语法。 和处在 HTML 区块标签间不同，Markdown 语法在 HTML 区段标签间是有效的。 特殊字符自动转换 在 HTML 文件中，有两个字符需要特殊处理： &lt; 和 &amp; 。 &lt; 符号用于起始标签，&amp;符号则用于标记 HTML 实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是 &amp;lt; 和 &amp;amp;。 &amp; 字符尤其让网络文档编写者受折磨，如果你要打「AT&amp;T」 ，你必须要写成「AT&amp;amp;T」。而网址中的 &amp; 字符也要转换。比如你要链接到： http://images.google.com/images?num=30&amp;q=larry+bird 你必须要把网址转换写为： http://images.google.com/images?num=30&amp;amp;q=larry+bird 才能放到链接标签的 href 属性里。不用说也知道这很容易忽略，这也可能是 HTML 标准检验所检查到的错误中，数量最多的。 Markdown 让你可以自然地书写字符，需要转换的由它来处理好了。如果你使用的 &amp; 字符是 HTML 字符实体的一部分，它会保留原状，否则它会被转换成 &amp;amp;。 所以你如果要在文档中插入一个版权符号 ©，你可以这样写： &amp;copy; Markdown 会保留它不动。而若你写： AT&amp;T 与AT&amp;amp;T是一样的 类似的状况也会发生在 &lt; 符号上，因为 Markdown 允许 兼容HTML ，如果你是把 &lt; 符号作为 HTML 标签的定界符使用，那 Markdown 也不会对它做任何转换，但是如果你写： 4&lt;5仍然是4&lt;5 &lt;p&gt; 1&lt;5 5&amp;5 &amp;nbsp;&amp;nbsp;&amp;nbsp;2+2 &lt;p&gt; 1]]></content>
@@ -38,8 +49,6 @@
     <url>%2F2017%2F12%2F09%2FPrinciples-of-Information-Visualization%2F</url>
     <content type="text"><![CDATA[Inroduction 本课程的主要内容是理解如何更清楚地向那些对数据感兴趣的利益相关者传达数据。有许多不同的利益相关者可能对使用视觉材料感兴趣。 例如，你想和同行的数据科学家分享公正的数据表达，他们能够做出自己的推论和解释。但是，您也希望能够与可能熟悉域名但正在寻找具体可操作见解的经理和主管分享数据故事。 在这个课程中将学会得到一个新的可视化技术，你将被要求扩展matplotlib代码库来增强其功能。这是您作为数据科学家的重要一步。要超越使用现成的工具，而是能够修改它们以支持理解数据和问题的新方法。 Tools for Thinking about Design (Alberto Cairo) 首先是抽象和形象 第二个方面是功能性和装饰性 第三个维度是密度和亮度 第四个方面是图形的维度 第五个维度是独创性和熟悉性 最后一个维度是新颖性和冗余性维度 Graphical heuristics: Data-ink ratio (Edward Tufte) introduces two interesting graphical heuristics, the data-ink ratio and chart junk. Tufte的第一个图形启发式是data-ink rate数据墨水比率。 Tufte将数据墨水定义为图形的不可擦除核心。根据所表示的数字的变化排列非冗余墨水,建议我们删除那些不会为图形添加新信息的元素。 另一个启发式称为chartjunk。现在，Tufte比其他形式的非数据墨水更受制于图表垃圾。事实上，他认为统计图上的艺术装饰就像我们数据图形中的杂草。 The Truthful Art (Alberto Cairo) The first quality of a good visualization is that it's truthful. First, we have to be honest with ourselves when we clean and summarize data. The second obligation is to our audience. The second quality of a visualization to consider is whether it is functional or not. The third quality of visualization, Cairo shares is whether it is beautiful or not. The fourth quality of visualization from Cairo is that information graphics should be insightful. The final quality of visualization which Cairo proposes is information graphics should be enlightening]]></content>
       <categories>
-        <category>Python</category>
-        <category>Matplotlib</category>
         <category>可视化</category>
       </categories>
       <tags>

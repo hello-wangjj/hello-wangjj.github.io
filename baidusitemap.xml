@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
-    <lastmod>2017-12-12T17:03:48.418Z</lastmod>
+    <lastmod>2017-12-14T06:19:28.702Z</lastmod>
     <data>
         <display>
         <title>Principles of Information Visualization</title>
@@ -20,13 +20,27 @@
          
            
              
-              <breadCrumb title="Python" url="http://blog.wang8008.cn/categories/Python/"/>
+              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.wang8008.cn/2017/12/14/Ten-Simple-Rules-for-Better-Figures/</loc>
+    <lastmod>2017-12-14T06:17:20.626Z</lastmod>
+    <data>
+        <display>
+        <title>Ten Simple Rules for Better Figures</title>
+        <pubTime>2017-12-14T06:09:35.000Z</pubTime>
+        
+        <tag>可视化</tag>
+         
+         
+           
              
-              <breadCrumb title="Matplotlib" url="http://blog.wang8008.cn/categories/Python/Matplotlib/"/>
-          
-             
-              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/Python/Matplotlib/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
           
         </display>
     </data>
