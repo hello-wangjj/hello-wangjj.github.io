@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[非线性方程求参数]]></title>
+    <url>%2F2017%2F12%2F26%2F%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E6%B1%82%E5%8F%82%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[Intro 最近遇到了一个问题，要求一个由多个非线性方程组成的方程的 参数 已经目标方程的形式 求解对应非线性方程的未知参数 例如： $$ s(t)=a\cdot f1(t)+b\cdot f2(t)+c \cdot f(3t) $$ 其中: $$f1(t)= w \cdot sin(k\cdot t)$$ $$f2(t)= 1- \frac{1}{\sqrt1-w^2}\cdot e^{-\alpha}\cdot sin[(1-\sqrt{1-w^2})+arccos(w)]$$ $f(3)$是一个cdf 概率累计分布函数 Python 解法 首先找了个LMFIT的库,可以读文档使用 123456789101112131415161718192021222324252627282930313233343536from numpy import sqrt, pi, exp, sin, arccos, cosfrom lmfit import Modelfrom scipy import statsimport numpy as npimport matplotlib.pyplot as plt__author__ = &apos;wangj&apos;__date__ = &apos;2017/12/26 00:41&apos;def my_sin(x, w1, k): return w1 * sin(k * x)def my_damping(x, w2, a, b, c): return w2 * (1 - 1 / sqrt(1 - a ** 2) * exp(-c) * sin(sqrt(1 - a ** 2) * b * x + arccos(a)))def my_peak(x, m, n): return m * stats.poisson.cdf(x, n)if __name__ == &apos;__main__&apos;: x = np.linspace(1, 200, 100) y = 10 * cos(x) + sin(x) mod = Model(my_sin) + Model(my_damping)+ Model(my_peak) pars = mod.make_params(w1=0.0001, k=-0.4, w2=-0.001, a=0.1, b=1, c=-9,m=0,n=10) pars[&apos;a&apos;].set(min=0.01, max=0.9999) result = mod.fit(y, pars, x=x) print(result.fit_report()) plt.plot(x, y, &apos;bo&apos;) plt.plot(x, result.init_fit, &apos;k--&apos;) plt.plot(x, result.best_fit, &apos;r-&apos;) plt.show() 关键的问题在于初始params的选择，这边可以使用一下Matlab的lsqcurvefit函数，参考下初始值的设定 Matlab 123456789101112131415161718192021222324t=1:15:400;Ca = 10*cos(t)+sin(t);k0=[0.0001 0.0001 0.0001 0.0001 0.0001 1.0009 0.00000001 10];% x1 * sin(t) + x2 * (1 - 1 / (sqrt(1 - x3 * x3)) * exp(-x4) * sin(sqrt(1 -% x3 * x3)*t + acos(x3)))++k(7)*cdf(&apos;poiss&apos;,t,k(8))F=@(k,t)k(1) * sin(k(5)*t) + k(2) * (1 - 1 / (sqrt(1 - k(3) * k(3))) * exp(-k(4)) * sin(sqrt(1 - k(3) * k(3))*k(6)*t + acos(k(3))));%% ==========lsqcurvefit==================options = optimset(&apos;MaxFunEvals&apos;,20000);[p,resnorm,residual,exitflag,output,lambda,jacobian]=lsqcurvefit(F,k0,t,Ca,[],[],options)ci = nlparci(p,residual,jacobian)yp=F(p,t);fprintf(&apos;\n\n使用函数lsqcurvefit()估计得到的参数值为:\n&apos;)fprintf(&apos;\t待求参数 k1 = %.6e\n&apos;,p(1))fprintf(&apos;\t待求参数 k2 = %.6e\n&apos;,p(2))fprintf(&apos;\t待求参数 k3 = %.6e\n&apos;,p(3))fprintf(&apos;\t待求参数 k4 = %.6e\n&apos;,p(4))fprintf(&apos;\t待求参数 k5 = %.6e\n&apos;,p(5))fprintf(&apos;\t待求参数 k6 = %.6e\n&apos;,p(6))% fprintf(&apos;\t待求参数 k7 = %.6e\n&apos;,p(7))% fprintf(&apos;\t待求参数 k8 = %.6e\n&apos;,p(8))fprintf(&apos;The sum of the squares is: %.3e\n\n&apos;,resnorm)figure;plot(t,Ca,&apos;r*-&apos;,t,yp(1,:),&apos;bo-&apos;)legend(&apos;exp Ca&apos;,&apos;pre Ca&apos;) 问题 参数越多，拟合效果就很不好]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[numpy常用函数记录]]></title>
+    <url>%2F2017%2F12%2F19%2Fnumpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[random模块 np.random.random Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数]]></content>
+      <categories>
+        <category>numpy</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>numpy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ten Simple Rules for Better Figures]]></title>
     <url>%2F2017%2F12%2F14%2FTen-Simple-Rules-for-Better-Figures%2F</url>
     <content type="text"><![CDATA[科学可视化经典定义为图形化显示科学数据的过程。 但是，这个过程远非直接的或自动的。 有很多不同的方法来表示相同的数据：散点图，线性图，条形图和饼图，等等。 此外，使用相同类型的情节的相同数据可能被视为非常不同，取决于谁在看数字。 科学可视化的更准确的定义将是人与数据之间的图形界面。 在这篇短文中，我们旨在提供一套基本的规则来改善图形设计，并解释一些常见的陷阱。 Rule 1: Know Your Audience Rule 2: Identify Your Message Rule 3: Adapt the Figure to the Support Medium Rule 4: Captions Are Not Optional Rule 5: Do Not Trust the Defaults Rule 6: Use Color Effectively Rule 7: Do Not Mislead the Reader Rule 8: Avoid “Chartjunk” Rule 9: Message Trumps Beauty Rule 10: Get the Right Tool 1234567891011121314151617181920212223242526272829303132import matplotlib.pyplot as pltimport numpy as npplt.figure()languages =[&apos;Python&apos;, &apos;SQL&apos;, &apos;Java&apos;, &apos;C++&apos;, &apos;JavaScript&apos;]pos = np.arange(len(languages))popularity = [56, 39, 34, 34, 29]# change the bar color to be less bright bluebars = plt.bar(pos, popularity, align=&apos;center&apos;, linewidth=0, color=&apos;lightslategrey&apos;)# make one bar, the python bar, a contrasting colorbars[0].set_color(&apos;#1F77B4&apos;)# soften all labels by turning greyplt.xticks(pos, languages, alpha=0.8)# remove the Y label since bars are directly labeled#plt.ylabel(&apos;% Popularity&apos;, alpha=0.8)plt.title(&apos;Top 5 Languages for Math &amp; Data \nby % popularity on Stack Overflow&apos;, alpha=0.8)# remove all the ticks (both axes), and tick labels on the Y axisplt.tick_params(top=&apos;off&apos;, bottom=&apos;off&apos;, left=&apos;off&apos;, right=&apos;off&apos;, labelleft=&apos;off&apos;, labelbottom=&apos;on&apos;)# remove the frame of the chartfor spine in plt.gca().spines.values(): spine.set_visible(False) # direct label each bar with Y axis valuesfor bar in bars: plt.gca().text(bar.get_x() + bar.get_width()/2, bar.get_height() - 5, str(int(bar.get_height())) + &apos;%&apos;, ha=&apos;center&apos;, color=&apos;w&apos;, fontsize=11)plt.show()]]></content>
