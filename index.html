@@ -337,6 +337,308 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.wang8008.cn/2018/03/29/排序算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="WangJJ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WangJJ's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/29/排序算法/" itemprop="url">排序算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-29T20:32:18+08:00">
+                2018-03-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-29T20:36:35+08:00">
+                2018-03-29
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="稳定性和时间复杂度">稳定性和时间复杂度</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">平均情况</th>
+<th style="text-align:center">最好</th>
+<th style="text-align:center">最差</th>
+<th style="text-align:center">辅助空间</th>
+<th style="text-align:center">稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">冒泡</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(n)</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(1)</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">插入</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(n)</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(1)</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">归并</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(n)</td>
+<td style="text-align:center">稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">选择</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(n2))</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(1)</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">希尔</td>
+<td style="text-align:center">o(nlogn)~o(n2)</td>
+<td style="text-align:center">o(n1.3))</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(1)</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">堆</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(1)</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+<tr>
+<td style="text-align:center">快速</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(nlogn)</td>
+<td style="text-align:center">o(n2)</td>
+<td style="text-align:center">o(nlogn)~o(n)</td>
+<td style="text-align:center">不稳定</td>
+</tr>
+</tbody>
+</table>
+<h2 id="插入排序">插入排序</h2>
+<p>插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是<strong>稳定</strong>的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 插入排序</span></span><br><span class="line">    count = len(lists)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, count):</span><br><span class="line">        key = lists[i]</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> lists[j] &gt; key:</span><br><span class="line">                lists[j + <span class="number">1</span>] = lists[j]</span><br><span class="line">                lists[j] = key</span><br><span class="line">            j -= <span class="number">1</span></span><br><span class="line">        print(lists)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert_sort([<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[3, 6, 4, 5, 2, 1, 0]
+[3, 4, 6, 5, 2, 1, 0]
+[3, 4, 5, 6, 2, 1, 0]
+[2, 3, 4, 5, 6, 1, 0]
+[1, 2, 3, 4, 5, 6, 0]
+[0, 1, 2, 3, 4, 5, 6]
+
+
+
+
+
+[0, 1, 2, 3, 4, 5, 6]
+</code></pre>
+<h2 id="希尔排序">希尔排序</h2>
+<p>希尔排序(Shell Sort)是插入排序的一种。也称缩小增量排序，是直接插入排序算法的一种更高效的改进版本。希尔排序是<strong>非稳定</strong>排序算法。该方法因DL．Shell于1959年提出而得名。 希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">shell_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 希尔排序</span></span><br><span class="line">    count = len(lists)</span><br><span class="line">    step = <span class="number">2</span></span><br><span class="line">    group = int(count / step)</span><br><span class="line">    <span class="keyword">while</span> group &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, group):</span><br><span class="line">            j = i + group</span><br><span class="line">            <span class="keyword">while</span> j &lt; count:</span><br><span class="line">                k = j - group</span><br><span class="line">                key = lists[j]</span><br><span class="line">                <span class="keyword">while</span> k &gt;= <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">if</span> lists[k] &gt; key:</span><br><span class="line">                        lists[k + group] = lists[k]</span><br><span class="line">                        lists[k] = key</span><br><span class="line">                    k -= group</span><br><span class="line">                j += group</span><br><span class="line">        group = int(group/step)</span><br><span class="line">        print(lists)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell_sort([<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 2, 1, 5, 3, 4, 6]
+[0, 1, 2, 3, 4, 5, 6]
+
+
+
+
+
+[0, 1, 2, 3, 4, 5, 6]
+</code></pre>
+<h2 id="冒泡排序">冒泡排序</h2>
+<p>它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 冒泡排序</span></span><br><span class="line">    count = len(lists)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, count):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, count):</span><br><span class="line">            <span class="keyword">if</span> lists[i] &gt; lists[j]:</span><br><span class="line">                lists[i], lists[j] = lists[j], lists[i]</span><br><span class="line">        print(lists)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bubble_sort([<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 6, 4, 5, 3, 2, 1]
+[0, 1, 6, 5, 4, 3, 2]
+[0, 1, 2, 6, 5, 4, 3]
+[0, 1, 2, 3, 6, 5, 4]
+[0, 1, 2, 3, 4, 6, 5]
+[0, 1, 2, 3, 4, 5, 6]
+[0, 1, 2, 3, 4, 5, 6]
+
+
+
+
+
+[0, 1, 2, 3, 4, 5, 6]
+</code></pre>
+<h2 id="快速排序">快速排序</h2>
+<p>通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(lists, left, right)</span>:</span></span><br><span class="line">    <span class="comment"># 快速排序</span></span><br><span class="line">    <span class="keyword">if</span> left &gt;= right:</span><br><span class="line">        <span class="keyword">return</span> lists</span><br><span class="line">    key = lists[left]</span><br><span class="line">    low = left</span><br><span class="line">    high = right</span><br><span class="line">    <span class="keyword">while</span> left &lt; right:</span><br><span class="line">        <span class="keyword">while</span> left &lt; right <span class="keyword">and</span> lists[right] &gt;= key:</span><br><span class="line">            right -= <span class="number">1</span></span><br><span class="line">        lists[left] = lists[right]</span><br><span class="line">        <span class="keyword">while</span> left &lt; right <span class="keyword">and</span> lists[left] &lt;= key:</span><br><span class="line">            left += <span class="number">1</span></span><br><span class="line">        lists[right] = lists[left]</span><br><span class="line">    lists[right] = key</span><br><span class="line">    quick_sort(lists, low, left - <span class="number">1</span>)</span><br><span class="line">    quick_sort(lists, left + <span class="number">1</span>, high)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+<h2 id="直接选择排序">直接选择排序</h2>
+<p>基本思想：第1趟，在待排序记录r1 ~ r[n]中选出最小的记录，将它与r1交换；第2趟，在待排序记录r2 ~ r[n]中选出最小的记录，将它与r2交换；以此类推，第i趟在待排序记录r[i] ~ r[n]中选出最小的记录，将它与r[i]交换，使有序序列不断增长直到全部排序完毕。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">select_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 选择排序</span></span><br><span class="line">    count = len(lists)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, count):</span><br><span class="line">        min = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, count):</span><br><span class="line">            <span class="keyword">if</span> lists[min] &gt; lists[j]:</span><br><span class="line">                min = j</span><br><span class="line">        lists[min], lists[i] = lists[i], lists[min]</span><br><span class="line">        print(lists)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select_sort([<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[0, 3, 4, 5, 2, 1, 6]
+[0, 1, 4, 5, 2, 3, 6]
+[0, 1, 2, 5, 4, 3, 6]
+[0, 1, 2, 3, 4, 5, 6]
+[0, 1, 2, 3, 4, 5, 6]
+[0, 1, 2, 3, 4, 5, 6]
+[0, 1, 2, 3, 4, 5, 6]
+
+
+
+
+
+[0, 1, 2, 3, 4, 5, 6]
+</code></pre>
+<h2 id="堆排序">堆排序</h2>
+<p>堆排序(Heapsort)是指利用堆积树（堆）这种数据结构所设计的一种排序算法，它是选择排序的一种。可以利用数组的特点快速定位指定索引的元素。堆分为大根堆和小根堆，是完全二叉树。大根堆的要求是每个节点的值都不大于其父节点的值，即A[PARENT[i]] &gt;= A[i]。在数组的非降序排序中，需要使用的就是大根堆，因为根据大根堆的要求可知，最大的值一定在堆顶。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">adjust_heap</span><span class="params">(lists, i, size)</span>:</span></span><br><span class="line">    lchild = <span class="number">2</span> * i + <span class="number">1</span></span><br><span class="line">    rchild = <span class="number">2</span> * i + <span class="number">2</span></span><br><span class="line">    max = i</span><br><span class="line">    <span class="keyword">if</span> i &lt; size / <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">if</span> lchild &lt; size <span class="keyword">and</span> lists[lchild] &gt; lists[max]:</span><br><span class="line">            max = lchild</span><br><span class="line">        <span class="keyword">if</span> rchild &lt; size <span class="keyword">and</span> lists[rchild] &gt; lists[max]:</span><br><span class="line">            max = rchild</span><br><span class="line">        <span class="keyword">if</span> max != i:</span><br><span class="line">            lists[max], lists[i] = lists[i], lists[max]</span><br><span class="line">            adjust_heap(lists, max, size)</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_heap</span><span class="params">(lists, size)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, (size/<span class="number">2</span>))[::<span class="number">-1</span>]:</span><br><span class="line">        adjust_heap(lists, i, size)</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">heap_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    size = len(lists)</span><br><span class="line">    build_heap(lists, size)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, size)[::<span class="number">-1</span>]:</span><br><span class="line">        lists[<span class="number">0</span>], lists[i] = lists[i], lists[<span class="number">0</span>]</span><br><span class="line">        adjust_heap(lists, <span class="number">0</span>, i)</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序">归并排序</h2>
+<p>归并排序是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<p>归并过程为：比较a[i]和a[j]的大小，若a[i]≤a[j]，则将第一个有序表中的元素a[i]复制到r[k]中，并令i和k分别加上1；否则将第二个有序表中的元素a[j]复制到r[k]中，并令j和k分别加上1，如此循环下去，直到其中一个有序表取完，然后再将另一个有序表中剩余的元素复制到r中从下标k到下标t的单元。归并排序的算法我们通常用递归实现，先把待排序区间[s,t]以中点二分，接着把左边子区间排序，再把右边子区间排序，最后把左区间和右区间用一次归并操作合并成有序的区间[s,t]。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span><span class="params">(left, right)</span>:</span></span><br><span class="line">    i, j = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">while</span> i &lt; len(left) <span class="keyword">and</span> j &lt; len(right):</span><br><span class="line">        <span class="keyword">if</span> left[i] &lt;= right[j]:</span><br><span class="line">            result.append(left[i])</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            result.append(right[j])</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">    result += left[i:]</span><br><span class="line">    result += right[j:]</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 归并排序</span></span><br><span class="line">    <span class="keyword">if</span> len(lists) &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> lists</span><br><span class="line">    num = len(lists) / <span class="number">2</span></span><br><span class="line">    left = merge_sort(lists[:num])</span><br><span class="line">    right = merge_sort(lists[num:])</span><br><span class="line">    <span class="keyword">return</span> merge(left, right)</span><br></pre></td></tr></table></figure>
+<h2 id="基数排序">基数排序</h2>
+<p>基数排序（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin sort，顾名思义，它是透过键值的部份资讯，将要排序的元素分配至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其时间复杂度为O (nlog(r)m)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">radix_sort</span><span class="params">(lists, radix=<span class="number">10</span>)</span>:</span></span><br><span class="line">    k = int(math.ceil(math.log(max(lists), radix)))</span><br><span class="line">    bucket = [[] <span class="keyword">for</span> i <span class="keyword">in</span> range(radix)]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, k+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> lists:</span><br><span class="line">            bucket[j/(radix**(i<span class="number">-1</span>)) % (radix**i)].append(j)</span><br><span class="line">        <span class="keyword">del</span> lists[:]</span><br><span class="line">        <span class="keyword">for</span> z <span class="keyword">in</span> bucket:</span><br><span class="line">            lists += z</span><br><span class="line">            <span class="keyword">del</span> z[:]</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.wang8008.cn/2017/12/26/非线性方程求参数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -452,7 +754,7 @@
 <p>$f(3)$是一个cdf 概率累计分布函数</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/26/非线性方程求参数/#more" rel="contents">
+            <a class="btn" href="/2017/12/26/非线性方程求参数/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -614,7 +916,7 @@
 </blockquote>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/19/numpy常用函数记录/#more" rel="contents">
+            <a class="btn" href="/2017/12/19/numpy常用函数记录/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -782,7 +1084,7 @@
 <h2 id="rule-10-get-the-right-tool">Rule 10: Get the Right Tool</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/14/Ten-Simple-Rules-for-Better-Figures/#more" rel="contents">
+            <a class="btn" href="/2017/12/14/Ten-Simple-Rules-for-Better-Figures/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -880,8 +1182,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-12T19:15:49+08:00">
-                2017-12-12
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-29T20:46:44+08:00">
+                2018-03-29
               </time>
             
           </span>
@@ -984,7 +1286,7 @@
 <!-- /TOC -->
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/10/markdown语法/#more" rel="contents">
+            <a class="btn" href="/2017/12/10/markdown语法/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1453,7 +1755,7 @@
 在这个课程中将学会得到一个新的可视化技术，你将被要求扩展matplotlib代码库来增强其功能。这是您作为数据科学家的重要一步。要超越使用现成的工具，而是能够修改它们以支持理解数据和问题的新方法。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/09/Principles-of-Information-Visualization/#more" rel="contents">
+            <a class="btn" href="/2017/12/09/Principles-of-Information-Visualization/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1770,7 +2072,7 @@
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/08/hello-world/#more" rel="contents">
+            <a class="btn" href="/2017/12/08/hello-world/#espandi" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1858,7 +2160,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1880,7 +2182,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1920,7 +2222,7 @@
       </section>
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=3951739&auto=0&height=32">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=421203247&auto=0&height=32">
 </iframe>
       
 
@@ -1935,7 +2237,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
