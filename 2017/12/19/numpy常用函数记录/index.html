@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="Python,numpy," />
+  <meta name="keywords" content="numpy,Python," />
 
 
 
@@ -112,14 +112,14 @@
 
 
 <meta name="description" content="random模块 np.random.random  Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数">
-<meta name="keywords" content="Python,numpy">
+<meta name="keywords" content="numpy,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="numpy常用函数记录">
 <meta property="og:url" content="http://blog.wang8008.cn/2017/12/19/numpy常用函数记录/index.html">
 <meta property="og:site_name" content="WangJJ&#39;s Blog">
 <meta property="og:description" content="random模块 np.random.random  Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-19T14:51:05.346Z">
+<meta property="og:updated_time" content="2018-04-23T07:56:20.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="numpy常用函数记录">
 <meta name="twitter:description" content="random模块 np.random.random  Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数">
@@ -383,8 +383,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-19T22:51:05+08:00">
-                2017-12-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-23T15:56:20+08:00">
+                2018-04-23
               </time>
             
           </span>
@@ -445,7 +445,23 @@
 <p>Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数</p>
 </blockquote>
 <a id="more"></a>
-
+<h2 id="np-flatzero">np.flatzero()</h2>
+<blockquote>
+<p>该函数输入一个矩阵，返回扁平化后矩阵中非零元素的位置（index）</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 &gt;&gt;&gt; x = np.arange(-2, 3)</span><br><span class="line">2 &gt;&gt;&gt; x</span><br><span class="line">3 array([-2, -1,  0,  1,  2])</span><br><span class="line">4 &gt;&gt;&gt; np.flatnonzero(x)</span><br><span class="line">5 array([0, 1, 3, 4])</span><br></pre></td></tr></table></figure>
+<p>这是在作业中给出的用法：不走寻常路，用来返回某个特定元素的位置</p>
+<p>对向量元素的判断d==3返回了一个和向量等长的由0/1组成的矩阵，然后调用函数，返回的位置，就是对应要找的元素的位置。</p>
+<h2 id="np-random-choice">np.random.choice()</h2>
+<p>可以从一个int数字或1维array里随机选取内容，并将选取结果放入n维array中返回。</p>
+<blockquote>
+<p>numpy.random.choice(a, size=None, replace=True, p=None)<br>
+replace 表示是否重复选取</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a : 1-D array-like or int</span><br><span class="line">    If an ndarray, a random sample is generated from its elements. </span><br><span class="line">    If an int, the random sample is generated as if a was np.arange(n)</span><br><span class="line"></span><br><span class="line">size : int or tuple of ints, optional </span><br><span class="line"></span><br><span class="line">replace : boolean, optional</span><br><span class="line">    Whether the sample is with or without replacement</span><br><span class="line"></span><br><span class="line">p : 1-D array-like, optional</span><br><span class="line">    The probabilities associated with each entry in a. If not given the sample assumes a uniform distribution over all entries in a.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; np.random.choice(5, 3)</span><br><span class="line">array([0, 3, 4])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; np.random.choice(5, 3, p=[0.1, 0, 0.3, 0.6, 0])</span><br><span class="line">array([3, 3, 0])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; np.random.choice(5, 3, replace=False)</span><br><span class="line">array([3,1,0])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; np.random.choice(5, 3, replace=False, p=[0.1, 0, 0.3, 0.6, 0])</span><br><span class="line">array([2, 3, 0])</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; aa_milne_arr = [&apos;pooh&apos;, &apos;rabbit&apos;, &apos;piglet&apos;, &apos;Christopher&apos;]</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; np.random.choice(aa_milne_arr, 5, p=[0.5, 0.1, 0.1, 0.3])</span><br><span class="line">array([&apos;pooh&apos;, &apos;pooh&apos;, &apos;pooh&apos;, &apos;Christopher&apos;, &apos;piglet&apos;],</span><br></pre></td></tr></table></figure>
+<h2 id="np-maxmium">np.maxmium()</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; np.maximum([-2, -1, 0, 1, 2], 0)</span><br><span class="line">array([0, 0, 0, 1, 2])</span><br><span class="line"></span><br><span class="line"># 当然 np.maximum 接受的两个参数，也可以大小一致</span><br><span class="line"># 或者更为准确地说，第二个参数只是一个单独的值时，其实是用到了维度的 broadcast 机制；</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -462,9 +478,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
             <a href="/tags/numpy/" rel="tag"># numpy</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -641,7 +657,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#random模块"><span class="nav-number">1.</span> <span class="nav-text">random&#x6A21;&#x5757;</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#random模块"><span class="nav-number">1.</span> <span class="nav-text">random&#x6A21;&#x5757;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-flatzero"><span class="nav-number">2.</span> <span class="nav-text">np.flatzero()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-random-choice"><span class="nav-number">3.</span> <span class="nav-text">np.random.choice()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#np-maxmium"><span class="nav-number">4.</span> <span class="nav-text">np.maxmium()</span></a></li></ol></div>
             
 
           </div>
@@ -1169,6 +1185,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

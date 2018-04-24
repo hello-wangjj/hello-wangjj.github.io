@@ -27,13 +27,13 @@
   <entry>
     <title><![CDATA[numpy常用函数记录]]></title>
     <url>%2F2017%2F12%2F19%2Fnumpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%AE%B0%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[random模块 np.random.random Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数]]></content>
+    <content type="text"><![CDATA[random模块 np.random.random Return random floats in the half-open interval [0.0, 1.0).产生随机矩阵，如random.random([2,3])产生一个2x3维的随机数 np.flatzero() 该函数输入一个矩阵，返回扁平化后矩阵中非零元素的位置（index） 123451 &gt;&gt;&gt; x = np.arange(-2, 3)2 &gt;&gt;&gt; x3 array([-2, -1, 0, 1, 2])4 &gt;&gt;&gt; np.flatnonzero(x)5 array([0, 1, 3, 4]) 这是在作业中给出的用法：不走寻常路，用来返回某个特定元素的位置 对向量元素的判断d==3返回了一个和向量等长的由0/1组成的矩阵，然后调用函数，返回的位置，就是对应要找的元素的位置。 np.random.choice() 可以从一个int数字或1维array里随机选取内容，并将选取结果放入n维array中返回。 numpy.random.choice(a, size=None, replace=True, p=None) replace 表示是否重复选取 1234567891011a : 1-D array-like or int If an ndarray, a random sample is generated from its elements. If an int, the random sample is generated as if a was np.arange(n)size : int or tuple of ints, optional replace : boolean, optional Whether the sample is with or without replacementp : 1-D array-like, optional The probabilities associated with each entry in a. If not given the sample assumes a uniform distribution over all entries in a. 12345678910111213141516&gt;&gt;&gt; np.random.choice(5, 3)array([0, 3, 4])&gt;&gt;&gt; np.random.choice(5, 3, p=[0.1, 0, 0.3, 0.6, 0])array([3, 3, 0])&gt;&gt;&gt; np.random.choice(5, 3, replace=False)array([3,1,0])&gt;&gt;&gt; np.random.choice(5, 3, replace=False, p=[0.1, 0, 0.3, 0.6, 0])array([2, 3, 0])&gt;&gt;&gt; aa_milne_arr = [&apos;pooh&apos;, &apos;rabbit&apos;, &apos;piglet&apos;, &apos;Christopher&apos;]&gt;&gt;&gt; np.random.choice(aa_milne_arr, 5, p=[0.5, 0.1, 0.1, 0.3])array([&apos;pooh&apos;, &apos;pooh&apos;, &apos;pooh&apos;, &apos;Christopher&apos;, &apos;piglet&apos;], np.maxmium() 12345&gt;&gt; np.maximum([-2, -1, 0, 1, 2], 0)array([0, 0, 0, 1, 2])# 当然 np.maximum 接受的两个参数，也可以大小一致# 或者更为准确地说，第二个参数只是一个单独的值时，其实是用到了维度的 broadcast 机制；]]></content>
       <categories>
         <category>numpy</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>numpy</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>

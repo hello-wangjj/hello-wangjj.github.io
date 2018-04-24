@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.wang8008.cn/2017/12/19/numpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2018-04-23T07:56:20.772Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.wang8008.cn/2017/12/10/markdown%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2018-03-29T12:46:44.049Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.wang8008.cn/2017/12/26/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E6%B1%82%E5%8F%82%E6%95%B0/</loc>
     
     <lastmod>2017-12-25T18:20:15.705Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.wang8008.cn/2017/12/19/numpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%AE%B0%E5%BD%95/</loc>
-    
-    <lastmod>2017-12-19T14:51:05.346Z</lastmod>
     
   </url>
   
