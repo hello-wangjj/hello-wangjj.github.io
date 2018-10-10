@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="WangJJ&#39;s Blog">
 <meta property="og:description" content="稳定性和时间复杂度    名称 平均情况 最好 最差 辅助空间 稳定性     冒泡 o(n2) o(n) o(n2) o(1) 稳定   插入 o(n2) o(n) o(n2) o(1) 稳定   归并 o(nlogn) o(nlogn) o(nlogn) o(n) 稳定   选择 o(n2) o(n2)) o(n2) o(1) 不稳定   希尔 o(nlogn)~o(n2) o(n1.3))">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-29T12:36:35.034Z">
+<meta property="og:updated_time" content="2018-10-10T15:20:51.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法">
 <meta name="twitter:description" content="稳定性和时间复杂度    名称 平均情况 最好 最差 辅助空间 稳定性     冒泡 o(n2) o(n) o(n2) o(1) 稳定   插入 o(n2) o(n) o(n2) o(1) 稳定   归并 o(nlogn) o(nlogn) o(nlogn) o(n) 稳定   选择 o(n2) o(n2)) o(n2) o(1) 不稳定   希尔 o(nlogn)~o(n2) o(n1.3))">
@@ -383,8 +383,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-03-29T20:36:35+08:00">
-                2018-03-29
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-10T23:20:51+08:00">
+                2018-10-10
               </time>
             
           </span>
@@ -510,6 +510,7 @@
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 <h2 id="插入排序">插入排序</h2>
 <p>插入排序的基本操作就是将一个数据插入到已经排好序的有序数据中，从而得到一个新的、个数加一的有序数据，算法适用于少量数据的排序，时间复杂度为O(n^2)。是<strong>稳定</strong>的排序方法。插入算法把要排序的数组分成两部分：第一部分包含了这个数组的所有元素，但将最后一个元素除外（让数组多一个空间才有插入的位置），而第二部分就只包含这一个元素（即待插入元素）。在第一部分排序完成后，再将这个最后元素插入到已排好序的第一部分中。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span><span class="params">(lists)</span>:</span></span><br><span class="line">    <span class="comment"># 插入排序</span></span><br><span class="line">    count = len(lists)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, count):</span><br><span class="line">        key = lists[i]</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> lists[j] &gt; key:</span><br><span class="line">                lists[j + <span class="number">1</span>] = lists[j]</span><br><span class="line">                lists[j] = key</span><br><span class="line">            j -= <span class="number">1</span></span><br><span class="line">        print(lists)</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
