@@ -1,217 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
   <url>
     <loc>http://blog.wang8008.cn/2017/12/10/markdown%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2018-10-10T11:50:27.212Z</lastmod>
-    <data>
-        <display>
-        <title>markdown语法</title>
-        <pubTime>2017-12-09T17:14:44.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-             
-              <breadCrumb title="markdown" url="http://blog.wang8008.cn/categories/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/19/numpy%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2018-04-23T07:56:20.772Z</lastmod>
-    <data>
-        <display>
-        <title>numpy常用函数记录</title>
-        <pubTime>2017-12-18T17:18:23.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>numpy</tag>
-         
-         
-           
-             
-              <breadCrumb title="numpy" url="http://blog.wang8008.cn/categories/numpy/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2018/03/29/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2018-03-29T12:36:35.034Z</lastmod>
-    <data>
-        <display>
-        <title>排序算法</title>
-        <pubTime>2018-03-29T12:32:18.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>排序</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://blog.wang8008.cn/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/26/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E6%B1%82%E5%8F%82%E6%95%B0/</loc>
     <lastmod>2017-12-25T18:20:15.705Z</lastmod>
-    <data>
-        <display>
-        <title>非线性方程求参数</title>
-        <pubTime>2017-12-25T17:41:42.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="Python" url="http://blog.wang8008.cn/categories/Python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/14/Ten-Simple-Rules-for-Better-Figures/</loc>
     <lastmod>2017-12-14T14:46:59.826Z</lastmod>
-    <data>
-        <display>
-        <title>Ten Simple Rules for Better Figures</title>
-        <pubTime>2017-12-14T06:09:35.000Z</pubTime>
-        
-        <tag>可视化</tag>
-         
-         
-           
-             
-              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/09/Principles-of-Information-Visualization/</loc>
     <lastmod>2017-12-14T06:19:28.702Z</lastmod>
-    <data>
-        <display>
-        <title>Principles of Information Visualization</title>
-        <pubTime>2017-12-09T02:51:13.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>Matplotlib</tag>
-         
-        <tag>MachineLearning</tag>
-         
-         
-           
-             
-              <breadCrumb title="可视化" url="http://blog.wang8008.cn/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/09/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2017-12-09T12:16:30.961Z</lastmod>
-    <data>
-        <display>
-        <title>vim常用命令</title>
-        <pubTime>2017-12-09T12:10:10.000Z</pubTime>
-        
-        <tag>vim</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://blog.wang8008.cn/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/09/git%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2017-12-09T12:16:07.042Z</lastmod>
-    <data>
-        <display>
-        <title>git入门</title>
-        <pubTime>2017-12-09T12:10:49.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://blog.wang8008.cn/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/08/hello-wangjj/</loc>
     <lastmod>2017-12-08T14:26:04.967Z</lastmod>
-    <data>
-        <display>
-        <title>hello wangjj</title>
-        <pubTime>2017-12-07T17:03:11.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://blog.wang8008.cn/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+  </url>  <url>
     <loc>http://blog.wang8008.cn/2017/12/08/hello-world/</loc>
     <lastmod>2017-12-08T11:36:56.562Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-12-07T16:46:48.351Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="http://blog.wang8008.cn/categories/Hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
+  </url>
 </urlset>
